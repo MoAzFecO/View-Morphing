@@ -54,3 +54,14 @@ This project implements view morphing in Python using Dlib for facial landmark d
 - **Number of Frames:**
   - Adjust the `frames` variable in the `main()` function to change the number of intermediate frames generated.
 
+## Results
+
+The results are organized into four directories, each demonstrating different inputs and outcomes of the view morphing algorithm:
+
+- **output_Joconde**: This directory contains results generated using images of the Joconde. The algorithm detected facial features, and the output includes a GIF along with individual images showcasing various alpha values for morphing.
+
+- **output_Joconde_manual_points**: In addition to automatically detected facial features, manual key points were added to enhance the accuracy of the morphing. The resulting images show improved transitions and are saved both as a GIF and as separate frames.
+
+- **output_Jules**: This directory contains results using images of my face. Due to size constraints, only five images were saved. 
+
+- **output_einstein**: Using images of Einstein as input, this directory showcases the results of the morphing process, including a GIF and individual images representing different alpha values.
