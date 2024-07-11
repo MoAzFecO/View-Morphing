@@ -21,7 +21,7 @@ This project implements view morphing in Python using Dlib for facial landmark d
    ```
    
 2. **Download a Dlib shape predictor model or train one:**
-   - For example download the `shape_predictor_68_face_landmarks.dat` file from [here](https://github.com/codeniko/shape_predictor_81_face_landmarks/blob/master/).
+   - For example download the `shape_predictor_68_face_landmarks.dat` file from [here](https://github.com/henriklg/view-morphing/blob/master/data/shape_predictor_68_face_landmarks.dat).
 
 3. **Prepare your images:**
    - Place your two unput images into the directory `input_images` 
@@ -62,6 +62,8 @@ The results are organized into four directories, each demonstrating different in
 
 - **output_Joconde_manual_points**: In addition to automatically detected facial features, manual key points were added to enhance the accuracy of the morphing. The resulting images show improved transitions and are saved both as a GIF and as separate frames.
 
-- **output_Jules**: This directory contains results using images of my face. Due to size constraints, only five images were saved. 
+- **output_Jules**: This directory contains results using images of my face. Due to size file constraints, only five images were saved. 
+
+- **output_Jules_manual_points**: Manual key points were added to enhance the accuracy of the morphing. The resulting images show improved transitions and are saved both as a GIF and as 5 separate frames.
 
 - **output_einstein**: Using images of Einstein as input, this directory showcases the results of the morphing process, including a GIF and individual images representing different alpha values.

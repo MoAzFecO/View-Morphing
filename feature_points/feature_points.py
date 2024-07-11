@@ -13,8 +13,8 @@ def detect_keypoints_face(img, current_image):
     # Load the pre-trained face detector from dlib
     detector = dlib.get_frontal_face_detector()
     # Load the pre-trained shape predictor model from dlib
-    predictor = dlib.shape_predictor('../shape_predictor_81_face_landmarks.dat') # https://github.com/codeniko/shape_predictor_81_face_landmarks/blob/master/
-    n_points = 81
+    predictor = dlib.shape_predictor('../shape_predictor_68_face_landmarks.dat') # https://github.com/henriklg/view-morphing/blob/master/data/shape_predictor_68_face_landmarks.dat
+    n_points = 68
 
     # Function to convert dlib shape to numpy array
     def shape_to_np(shape, dtype="int"):
@@ -34,7 +34,6 @@ def detect_keypoints_face(img, current_image):
         for (x, y) in shape:
             keypoints_list.append((int(x), int(y)))
             cv2.circle(image, (x, y), 1, (0, 0, 255), -1)
-    cv2.imwrite(f"facial_features{current_image}.jpg", image)
     return keypoints_list
 
 
@@ -136,6 +135,13 @@ def main(im1, im2):
 
 if __name__ == '__main__':
     # Path to images
-    im1 = cv2.imread('../input_images/Joconde.jpg')
-    im2 = cv2.imread('../input_images/Joconde_flip.jpg')
-    main(im1, im2)
+    img1 = cv2.imread('../input_images/Joconde.jpg')
+    img2 = cv2.imread('../input_images/Joconde_flip.jpg')
+    # img1 = cv2.imread('../input_images/jules.jpg')
+    # img2 = cv2.imread('../input_images/jules2.jpg')
+
+    # if you want to change the size of the image
+    # img1 = cv2.resize(img1, (1125, 1500), interpolation=cv2.INTER_AREA)
+    # img2 = cv2.resize(img2, (1125, 1500), interpolation=cv2.INTER_AREA)
+    
+    main(img1, img2)
